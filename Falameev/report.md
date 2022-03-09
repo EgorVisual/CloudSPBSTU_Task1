@@ -1,5 +1,5 @@
 # Веб-сервер (Машина А)
-Данные об UbuntuA:
+Данные об Ubuntu A:
  
 ![info](Assets\images\Ainfo.png)
 
@@ -12,7 +12,7 @@
 ![info](Assets\images\Aipaddr.png)
 
 # Веб-шлюз (Машина B)
-Данные об UbuntuB:
+Данные об Ubuntu B:
  
 ![info](Assets\images\Binfo.png)
 
@@ -44,7 +44,7 @@ sudo tcpdump -i enp0s9 tcp
 ![info](Assets\images\Bfalserequest.png)
 
 # Веб-клиент (Машина С)
-Данные об UbuntuC:
+Данные об Ubuntu C:
  
 ![info](Assets\images\Cinfo.png)
 
