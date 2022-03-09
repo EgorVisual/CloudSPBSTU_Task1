@@ -1,33 +1,33 @@
 # Веб-сервер (Машина А)
 Данные об Ubuntu A:
  
-![info](Assets\images\Ainfo.png)
+![info](./Assets/images/Ainfo.png)
 
 На данной машине установлен и развернут http сервер на порту 5000:
 
-![info](Assets\images\Aresult.png)
+![info](./Assets/images/Aresult.png)
 
 Конфигурация адаптеров:
 
-![info](Assets\images\Aipaddr.png)
+![info](./Assets/images/Aipaddr.png)
 
 # Веб-шлюз (Машина B)
 Данные об Ubuntu B:
  
-![info](Assets\images\Binfo.png)
+![info](./Assets/images/Binfo.png)
 
 Данная машина служит шлюзом для передачи данных из разных подсетей.
 Конфигурация адаптеров:
 
-![info](Assets\images\Bipaddr.png)
+![info](./Assets/images/Bipaddr.png)
 
 Обхор конфигурации перенаправления запросов в машине UbuntuB:
 
-![info](Assets\images\Biptables.png)
+![info](./Assets/images/Biptables.png)
 
 Проверим наличие 1 у параметра:
 
-![info](Assets\images\Bipforward.png)
+![info](./Assets/images/Bipforward.png)
 
 Воспользуемся следующей командой, чтобы отобразить передчу данных через шлюз
 ```shell
@@ -35,26 +35,26 @@ sudo tcpdump -i enp0s9 tcp
 ```
 Получим следующий результат: 
 
-![info](Assets\images\BResult.png)
+![info](./Assets/images/BResult.png)
 
 Исходя из данного результата мы видим, что через шлюз с адреса 192.168.6.10 на адрес 192.168.17.10:5000 приходит запрос.
 И с адреса 192.168.17.10:5000 на 192.168.6.10 приходит ответ.
 При отправки запроса на порт 4000 запрос через шлюз не доходит до сервера:
 
-![info](Assets\images\Bfalserequest.png)
+![info](./Assets/images/Bfalserequest.png)
 
 # Веб-клиент (Машина С)
 Данные об Ubuntu C:
  
-![info](Assets\images\Cinfo.png)
+![info](./Assets/images/Cinfo.png)
 
 Конфигурация адаптеров:
 
-![info](Assets\images\Cipaddr.png)
+![info](./Assets/images/Cipaddr.png)
 
 В результате организации связи между вертуальными машинами мы будем работать со списком следующего типа: (Имя:Рост). В ходе работы были реализованы запросы на отображение всего списка, отображение отдельного человека из списка с ростом, изменение роста конкретного человека через put запрос и добавление нового члена списка через post запрос.
 Примеры запросов представлены sh.sh.
 
-![info](Assets\images\CResult.png)
+![info](./Assets/images/CResult.png)
 
 При перезагрузке все машины возвращаются в заданное состояние. Все файлы и конфигурации сохранены. Сервер автоматически запускается при перезагрузке.
